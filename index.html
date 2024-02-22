@@ -5,30 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio de Ayelen</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Courrier+New:400,700" rel="stylesheet">
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #000; /* Cambié el fondo a negro */
-      color: #00ff00; /* Cambié el color de la fuente a verde */
+      font-family: 'Courier New', monospace;
+      background-color: #000;
+      color: #00ff00; 
       margin: 0;
       padding: 0;
     }
 
-    /* Aquí se aplica el formato de COBOL específicamente al contenido del menú principal */
     nav a {
-      font-family: 'Courier New', monospace; /* Formato de fuente estilo COBOL */
+      font-family: 'Cobol Bold', monospace; 
       text-decoration: none;
-      color: #00ff00 !important; /* Color de texto del menú principal en verde, !important para priorizar este estilo */
+      color: #00ff00 !important; /* Color del texto del menú principal */
       font-weight: bold;
       margin-right: 20px;
       background-color: #333; /* Color de fondo del menú principal */
       padding: 10px; /* Espaciado interno del menú principal */
-      border-radius: 8px; /* Bordes redondeados del menú principal */
     }
 
     header {
-      background-color: #333; /* Cambié el tono del fondo del encabezado a un tono más oscuro */
+      background-color: #333;
     }
 
     nav {
@@ -45,8 +43,7 @@
 
     h1 {
       font-size: 3rem;
-      color: #007BFF;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      color: #00ff00;
     }
 
     h1 span {
@@ -55,40 +52,51 @@
 
     p {
       font-size: 1.2rem;
-      color: #555;
+      color: #00ff00;
     }
 
     #instructions {
       font-size: 1.2rem;
       color: #FF0000;
+      margin-top: 20px; /* Espacio entre el texto y el cursor */
+      position: relative;
     }
+
+    #cursor {
+      display: inline-block;
+      width: 10px; /* Ancho del cursor */
+      height: 1.2rem; /* Altura del cursor */
+      background-color: #00ff00; /* Color del cursor en verde */
+      animation: blink 1s infinite; /* Animación de parpadeo */
+    }
+
+    @keyframes blink {
+      0%, 100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Aquí puedes agregar estilos personalizados si es necesario */
   </style>
-</head>
-<body class="bg-gray-100">
-  <header class="bg-white shadow-md">
+  <body class="bg-black-100">
+  <header class="bg-black">
     <nav class="container mx-auto px-6 py-3 flex justify-center items-center">
       <div class="flex space-x-4 items-center">
-        <!-- Los enlaces del menú principal han sido eliminados -->
       </div>
-    </nav>
-  </header>
-  <main class="container mx-auto px-6 py-8 h-screen flex items-center justify-center">
+    </nav>        
+ </header>
+ <main class="container mx-auto px-6 py-8 h-screen flex items-center justify-center">
     <div class="text-center">
       <h1 class="text-5xl font-bold mb-4">Hola, mi nombre es Ayelen Rivero <span>¡Bienvenidos!</span></h1>
       <p class="text-xl">¡Espero que disfruten de su visita y puedan sacarle provecho!</p>
-      <p id="instructions">Escriba TSO Enter para ver el menú principal</p>
+      <p id="instructions">Escriba TSO <span id="cursor"></span> Enter para ver el menú principal</p>
     </div>
   </main>
-
-  <script>
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Enter') {
-        // Redirigir a la página deseada, por ejemplo '/menu-principal.html'
-        window.location.href = '/menu-principal.html';
-      }
-    });
-  </script>
-</body>
+  
+ </body>
 </html>
 
 
