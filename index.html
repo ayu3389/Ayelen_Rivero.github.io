@@ -60,6 +60,7 @@
       color: #FF0000;
       margin-top: 20px; /* Espacio entre el texto y el cursor */
       position: relative;
+      display: inline-block;
     }
 
     #cursor {
@@ -80,14 +81,14 @@
     }
 
     /* Aquí puedes agregar estilos personalizados si es necesario */
-  </style>
+    </style>
   <body class="bg-black-100">
-  <header class="bg-black">
-    <nav class="container mx-auto px-6 py-3 flex justify-center items-center">
+    <header class="bg-black">
+     <nav class="container mx-auto px-6 py-3 flex justify-center items-center">
       <div class="flex space-x-4 items-center">
       </div>
-    </nav>        
- </header>
+     </nav>        
+   </header>
  <main class="container mx-auto px-6 py-8 h-screen flex items-center justify-center">
     <div class="text-center">
       <h1 class="text-5xl font-bold mb-4">Hola, mi nombre es Ayelen Rivero <span>¡Bienvenidos!</span></h1>
@@ -95,6 +96,20 @@
       <p id="instructions">Escriba TSO Enter para ver el menú principal <span id="cursor"></span></p>
     </div>
   </main>
+
+  <script>
+    document.addEventListener('keydown', function (event) {
+      const instructionsElement = document.getElementById('instructions');
+      if (event.key === 'Enter') {
+        // Redirigir a la página deseada al presionar Enter
+        window.location.href = '/menu-principal.html';
+      } else if (event.key === 't') {
+        // Cambiar el formato del texto cuando se presiona 't'
+        instructionsElement.innerHTML = 'Escriba TSO' + '<span id="cursor"></span> Enter para ver el menú principal';
+      }
+    });
+  </script>
+    
   
  </body>
 </html>
