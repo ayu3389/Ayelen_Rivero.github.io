@@ -8,15 +8,27 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
   <style>
     body {
-      font-family: 'Cobol Light', monospace; 
-      background-color: #000;
-      color: #00ff00; 
+      font-family: 'Open Sans', sans-serif;
+      background-color: #000; /* Cambié el fondo a negro */
+      color: #00ff00; /* Cambié el color de la fuente a verde */
       margin: 0;
       padding: 0;
     }
-    
+
+    /* Aquí se aplica el formato de COBOL específicamente al contenido del menú principal */
+    nav a {
+      font-family: 'Courier New', monospace; /* Formato de fuente estilo COBOL */
+      text-decoration: none;
+      color: #00ff00 !important; /* Color de texto del menú principal en verde, !important para priorizar este estilo */
+      font-weight: bold;
+      margin-right: 20px;
+      background-color: #333; /* Color de fondo del menú principal */
+      padding: 10px; /* Espaciado interno del menú principal */
+      border-radius: 8px; /* Bordes redondeados del menú principal */
+    }
+
     header {
-      background-color: #333; /* Fondo del encabezado */
+      background-color: #333; /* Cambié el tono del fondo del encabezado a un tono más oscuro */
     }
 
     nav {
@@ -26,16 +38,6 @@
       height: 100%;
     }
 
-    nav a {
-      font-family: 'Cobol Bold', monospace; 
-      text-decoration: none;
-      color: #00ff00 !important; /* Color del texto del menú principal */
-      font-weight: bold;
-      margin-right: 20px;
-      background-color: #333; /* Color de fondo del menú principal */
-      padding: 10px; /* Espaciado interno del menú principal */
-    }
-
     main {
       padding: 2rem;
       text-align: center;
@@ -43,36 +45,50 @@
 
     h1 {
       font-size: 3rem;
-      color: #00ff00;
+      color: #007BFF;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 span {
+      color: #FF0000; /* Agregado para cambiar el color del texto al final del h1 a rojo */
     }
 
     p {
       font-size: 1.2rem;
-      color: #00ff00;
+      color: #555;
     }
 
-    
-
-    /* Aquí puedes agregar estilos personalizados si es necesario */
+    #instructions {
+      font-size: 1.2rem;
+      color: #FF0000;
+    }
   </style>
-  <body class="bg-black-100">
-  <header class="bg-black">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-white shadow-md">
     <nav class="container mx-auto px-6 py-3 flex justify-center items-center">
       <div class="flex space-x-4 items-center">
-        <a href="/" class="text-lg font-semibold">Inicio</a>
-        <a href="/cv.html" class="text-lg font-semibold">CV</a>
-        <a href="/certificaciones.html" class="text-lg font-semibold">Sobre mi</a>
-        <a href="/certificaciones.html" class="text-lg font-semibold">Mis proyectos</a>
-</head>
-</header>
-<main class="container mx-auto px-6 py-8 h-screen flex items-center justify-center">
+        <!-- Los enlaces del menú principal han sido eliminados -->
+      </div>
+    </nav>
+  </header>
+  <main class="container mx-auto px-6 py-8 h-screen flex items-center justify-center">
     <div class="text-center">
-      <h1 class="text-5xl font-bold mb-4">Hola, mi nombre es Ayelen Rivero</h1>
-      <p class="text-xl">¡Bienvenidos a mi Portfolio! Espero que disfruten de su visita y puedan sacarle provecho.</p>
+      <h1 class="text-5xl font-bold mb-4">Hola, mi nombre es Ayelen Rivero <span>¡Bienvenidos!</span></h1>
+      <p class="text-xl">¡Espero que disfruten de su visita y puedan sacarle provecho!</p>
+      <p id="instructions">Escriba TSO Enter para ver el menú principal</p>
     </div>
-</main>
-  
-  
+  </main>
+
+  <script>
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        // Redirigir a la página deseada, por ejemplo '/menu-principal.html'
+        window.location.href = '/menu-principal.html';
+      }
+    });
+  </script>
 </body>
 </html>
+
 
