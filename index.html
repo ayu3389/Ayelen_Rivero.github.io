@@ -91,29 +91,28 @@
    </header>
  <main class="container mx-auto px-6 py-8 h-screen flex items-center justify-center">
     <div class="text-center">
-       <h1 class="text-5xl font-bold mb-4"> <span>      IO         IOIOIOIO  </span></h1>
+       <h1 class="text-5xl font-bold mb-4"> <span>     IO         IOIOIOIO  </span></h1>
       <h1 class="text-5xl font-bold mb-4"> <span>     IOIO        IO     IO  </span></h1>
       <h1 class="text-5xl font-bold mb-4"> <span>    IO  IO       IO      IO </span></h1>
       <h1 class="text-5xl font-bold mb-4"> <span>   IO    IO      IO     IO  </span></h1>
-      <h1 class="text-5xl font-bold mb-4"> <span>  IOiIOIOIOIO    IOIOIOIO   </span></h1>
-      <h1 class="text-5xl font-bold mb-4"> <span> IO         IO   IO  IO     </span></h1>
-      <h1 class="text-5xl font-bold mb-4"> <span>IO           IO  IO   IO    </span></h1>
+      <h1 class="text-5xl font-bold mb-4"> <span>  IOIOIOIOIO     IOIOIOIO   </span></h1>
+      <h1 class="text-5xl font-bold mb-4"> <span> IO        IO    IO  IO     </span></h1>
+      <h1 class="text-5xl font-bold mb-4"> <span>IO          IO   IO   IO    </span></h1>
       <p class="text-xl">¡ESPERO QUE DISFRUTEN DE SU VISITA Y LE SAQUEN PROVECHO!</p>
-      <p id="instructions">ESCRIBA TSO Y PRESIONE ENTER PARA INGRESAR AL MENU PRINCIPAL <span id="cursor"></span></p>
+      <p id="instructions">PRESIONE ENTER PARA INGRESAR AL MENU PRINCIPAL O ESC PARA SALIR <span id="cursor"></span></p>
     </div>
   </main>
 
-  <script>
-    document.addEventListener('keydown', function (event) {
-      const instructionsElement = document.getElementById('instructions');
-      if (event.key === 'Enter') {
-        // Redirigir a la página deseada al presionar Enter
-        window.location.href = '/Menú_Principal.html';
-      } else if (event.key === 't') {
-        // Cambiar el formato del texto cuando se presiona 't'
-        instructionsElement.innerHTML = 'Escriba TSO<span id="cursor"></span>Enter para ver el menú principal';
-      }
-    });
+ <script>
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      // Redirigir a la página deseada al presionar Enter
+      window.location.href = 'menu-principal.html';
+    } else if (event.key === 'Escape') {
+      // Mostrar un mensaje de despedida
+      alert('¡Hasta luego! Gracias por visitar.');
+    }
+   });
   </script>
     
   
