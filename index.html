@@ -91,29 +91,31 @@
    </header>
  <main class="container mx-auto px-6 py-8 h-screen flex items-center justify-center">
     <div class="text-center">
-       <h1 class="text-5xl font-bold mb-4">&nbsp;AR&nbsp;&nbsp;&nbsp;ARARARAR</h1>
-      <h1 class="text-5xl font-bold mb-4">&nbsp;AR&nbsp;AR&nbsp;&nbsp;AR&nbsp;AR</h1>
-      <h1 class="text-5xl font-bold mb-4">&nbsp;AR&nbsp;AR&nbsp;&nbsp;AR&nbsp;AR</h1>
-      <h1 class="text-5xl font-bold mb-4">&nbsp;AR&nbsp;AR&nbsp;&nbsp;AR&nbsp;AR</h1>
-      <h1 class="text-5xl font-bold mb-4">&nbsp;ARARARARAR&nbsp;&nbsp;ARARARAR</h1>
-      <h1 class="text-5xl font-bold mb-4">&nbsp;AR&nbsp;AR&nbsp;&nbsp;AR&nbsp;AR</h1>
-      <h1 class="text-5xl font-bold mb-4">&nbsp;AR&nbsp;&nbsp;AR&nbsp;AR&nbsp;&nbsp;AR</h1>
+      <div class="text-start">
+      <h1 class="text-5xl font-bold mb-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ARARARAR</h1>
+      <h1 class="text-5xl font-bold mb-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;AR</h1>
+      <h1 class="text-5xl font-bold mb-4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;AR</h1>
+      <h1 class="text-5xl font-bold mb-4">&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;AR</h1>
+      <h1 class="text-5xl font-bold mb-4">&nbsp;&nbsp;&nbsp;&nbsp;ARARARARAR&nbsp;&nbsp;ARARARAR</h1>
+      <h1 class="text-5xl font-bold mb-4">&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;AR&nbsp;&nbsp;AR&nbsp;</h1>
+      <h1 class="text-5xl font-bold mb-4">&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AR&nbsp;&nbsp;AR&nbsp;&nbsp;&nbsp;&nbsp;AR</h1>
+    </div>
       <p class="text-xl">¡ESPERO QUE DISFRUTEN DE SU VISITA Y LE SAQUEN PROVECHO!</p>
       <p id="instructions">PRESIONE ENTER PARA INGRESAR AL MENU PRINCIPAL O ESC PARA SALIR <span id="cursor"></span></p>
-    </div>
+    </div>      
   </main>
     
   <script>
-
-    document.addEventListener('keydown', function (event) {
+    function redireccionar(event) {
       if (event.key === 'Enter') {
-        // Redirigir a la página deseada al presionar Enter
-        href='Recursos_Dev/MenuPrincipal.html'; // Ruta relativa o absoluta según la ubicación de tus archivos
-      } else if (event.key === 'Escape') {
+        window.location.href = "MenuPrincipal.html";
+      }else if (event.key === 'Escape') {
         // Mostrar un mensaje de despedida
         alert('¡Hasta luego! Gracias por visitar.');
       }
-    });
+    }
+    document.body.addEventListener('keydown', redireccionar);
+
   </script>
   
     
