@@ -48,14 +48,35 @@
     main {
       text-align: center; /* Centro el contenido principal */
       padding: 20px; /* Agrego espacio interno al contenido principal */
+      background-color: #800080;
+      color: #fff;
+    }
     }
   </style>
 </head>
 <body>
 
+    <nav>
+    <ul>
+      <li><a href="/">Menu</a></li>
+      <li><a href="/">Utilities</a></li>
+      <li><a href="/">Compilers</a></li>
+      <li><a href="/">Options</a></li>
+      <li><a href="/">Status</a></li>
+      <li><a href="/">Help</a></li>
+    </ul>
+  </nav>
+
   <header>
-    <h1>Menú Principal</h1>
+    <h1>ISPF Primary Option Menu</h1>
   </header>
+
+  <!-- Barra de comandos -->
+    <form id="command-bar" action="/redireccionar.html" method="POST">
+      <label for="command-input">Command ===> </label>
+      <input type="text" id="command-input" name="command" placeholder="Escribe el número de la opción">
+      <button type="submit">Enviar</button>
+    </form>
 
   <nav>
     <ul>
@@ -66,15 +87,6 @@
     </ul>
   </nav>
 
-  <main>
-    <h2>Bienvenido al Menú Principal</h2>
-    <p>Selecciona una opción:</p>
-    <ul>
-      <li><a href="#">Opción 1</a></li>
-      <li><a href="#">Opción 2</a></li>
-      <li><a href="#">Opción 3</a></li>
-    </ul>
-  </main>
 
 </body>
 </html>
