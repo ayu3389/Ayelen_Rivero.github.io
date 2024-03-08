@@ -5,52 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú Principal</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css?family=Courrier+New:400,700" rel="stylesheet">
-  <!-- Agrega aquí cualquier recurso adicional que necesites para tu página -->
+  <link href="https://fonts.googleapis.com/css?family=Courier+New:400,700" rel="stylesheet">
   <style>
-
     body {
       font-family: 'Courier New', monospace;
       background-color: #000;
-      color: #00ff00; 
+      color: #00ff00;
       margin: 0;
       padding: 0;
     }
 
     nav a {
-      font-family: 'Cobol Bold', monospace; 
+      font-family: 'Courier New', monospace;
       text-decoration: none;
-      color: #00ff00 !important; /* Color del texto del menú principal */
+      color: #00ff00 !important;
       font-weight: bold;
       margin-right: 20px;
-      background-color: #333; /* Color de fondo del menú principal */
-      padding: 10px; /* Espaciado interno del menú principal */
+      background-color: #333;
+      padding: 10px;
     }
 
     header {
       background-color: #333;
+      text-align: center; /* Centro el texto del encabezado */
+      padding: 10px; /* Agrego un poco de espacio interno */
     }
 
-    <header>
-    <h1>Menú Principal</h1>
-    </header>
+    header h1 {
+      color: #00ff00; /* Color verde para el título */
+    }
 
-    <nav>
-      <ul>
-        <li><a href="/">Inicio</a></li>
-        <li><a href="/cv.html">CV</a></li>
-        <li><a href="/sobre-mi.html">Sobre mí</a></li>
-        <li><a href="/proyectos.html">Mis proyectos</a></li>
-      </ul>
-    </nav>
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
 
+    nav li {
+      display: inline; /* Muestra los elementos de la lista en línea */
+    }
 
+    main {
+      text-align: center; /* Centro el contenido principal */
+      padding: 20px; /* Agrego espacio interno al contenido principal */
+    }
   </style>
-  
-  
+</head>
+<body>
+
+  <header>
+    <h1>Menú Principal</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/cv.html">CV</a></li>
+      <li><a href="/sobre-mi.html">Sobre mí</a></li>
+      <li><a href="/proyectos.html">Mis proyectos</a></li>
+    </ul>
+  </nav>
 
   <main>
-    <!-- Contenido principal de la página -->
     <h2>Bienvenido al Menú Principal</h2>
     <p>Selecciona una opción:</p>
     <ul>
@@ -60,7 +76,6 @@
     </ul>
   </main>
 
-  <!-- Agrega aquí cualquier otro contenido necesario -->
-
 </body>
 </html>
+
